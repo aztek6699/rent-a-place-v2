@@ -12,6 +12,8 @@ public interface LocationRepo extends JpaRepository<PropertyLocation, Long> {
 
     Optional<PropertyLocation> findLocationByAddress(String address);
 
+    Boolean existsByAddress(String address);
+
     List<Long> findLocationByCity(String city);
 
     List<Long> findLocationByCountry(String country);

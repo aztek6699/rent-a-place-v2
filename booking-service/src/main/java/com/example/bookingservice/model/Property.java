@@ -1,4 +1,4 @@
-package com.example.propertyservice.model;
+package com.example.bookingservice.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
