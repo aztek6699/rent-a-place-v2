@@ -1,0 +1,43 @@
+server:
+  port: 8069
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
+
+
+
+#      routes:
+#        - id: userService
+#          uri: lb://user-service
+#          predicates:
+#            - Path=/api/user/**
+#        - id: propertyService
+#          uri: lb://property-service
+#          predicates:
+#            - Path=/api/property/**
